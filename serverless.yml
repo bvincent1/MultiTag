@@ -1,0 +1,19 @@
+service: MultiTag
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+  stage: dev
+  region: us-east-1
+  environment:
+    CLIENT_ID: ${env:CLIENT_ID}
+    CLIENT_SECRET: {env:CLIENT_SECRET}
+
+functions:
+  tags:
+    handler: handler.tags
+    events:
+      - http:
+            path: tags
+            method: post
+            cors: true

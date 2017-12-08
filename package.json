@@ -1,0 +1,23 @@
+{
+  "name": "multitag",
+  "version": "1.0.0",
+  "description": "Search gfycat via multiple tags",
+  "main": "handler.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/bvincent1/MultiTag.git"
+  },
+  "keywords": [
+    "gfycat",
+    "serverless"
+  ],
+  "author": "bvincent1",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bvincent1/MultiTag/issues"
+  },
+  "homepage": "https://github.com/bvincent1/MultiTag#readme"
+}

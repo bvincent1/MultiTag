@@ -5,15 +5,12 @@ provider:
   runtime: nodejs6.10
   stage: dev
   region: us-east-1
-  environment:
-    CLIENT_ID: ${env:CLIENT_ID}
-    CLIENT_SECRET: {env:CLIENT_SECRET}
 
 functions:
   tags:
     handler: handler.tags
     events:
       - http:
-            path: tags
+            path: v1/tags
             method: post
             cors: true

@@ -1,5 +1,5 @@
 install:
-	npm install
+	yarn
 
 test:
 	node test.js

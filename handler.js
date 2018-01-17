@@ -12,7 +12,7 @@ module.exports.tags = (event, context, callback) => {
     const data = JSON.parse(event.body);
 
     let responses = data.tagCursorArray.map((tagCursorObject) => {
-      let searchString = '?count=10';
+      let searchString = '?count=20';
 
       if (tagCursorObject.cursor) {
         searchString += '&tagName=' + tagCursorObject.tag + '&cursor=' + tagCursorObject.cursor;
@@ -50,6 +50,9 @@ module.exports.tags = (event, context, callback) => {
 
       const response = {
         statusCode: 200,
+        headers: {
+          "Access-Control-Allow-Origin" : "*", // Required for CORS support to work
+        },
         body: JSON.stringify({
           'gfycatArray': gfycatArray,
           'tagCursorArray': tagCursorArray,
